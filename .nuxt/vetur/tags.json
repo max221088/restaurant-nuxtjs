@@ -4,5 +4,11 @@
   },
   "MyHeader": {
     "description": "Auto imported from components/MyHeader.vue"
+  },
+  "ProductCard": {
+    "description": "Auto imported from components/ProductCard.vue"
+  },
+  "RestaurantCard": {
+    "description": "Auto imported from components/RestaurantCard.vue"
   }
 }

@@ -8,3 +8,5 @@ You can directly use them in pages and other components without the need to impo
 
 - `<MyFooter>` | `<my-footer>` (components/MyFooter.vue)
 - `<MyHeader>` | `<my-header>` (components/MyHeader.vue)
+- `<ProductCard>` | `<product-card>` (components/ProductCard.vue)
+- `<RestaurantCard>` | `<restaurant-card>` (components/RestaurantCard.vue)
