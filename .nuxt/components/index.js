@@ -2,6 +2,8 @@ export { default as MyFooter } from '../../components/MyFooter.vue'
 export { default as MyHeader } from '../../components/MyHeader.vue'
 export { default as ProductCard } from '../../components/ProductCard.vue'
 export { default as RestaurantCard } from '../../components/RestaurantCard.vue'
+export { default as ModalAuth } from '../../components/modal/modalAuth.vue'
+export { default as ModalCart } from '../../components/modal/modalCart.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

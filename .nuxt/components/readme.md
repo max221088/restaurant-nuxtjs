@@ -10,3 +10,5 @@ You can directly use them in pages and other components without the need to impo
 - `<MyHeader>` | `<my-header>` (components/MyHeader.vue)
 - `<ProductCard>` | `<product-card>` (components/ProductCard.vue)
 - `<RestaurantCard>` | `<restaurant-card>` (components/RestaurantCard.vue)
+- `<ModalAuth>` | `<modal-auth>` (components/modal/modalAuth.vue)
+- `<ModalCart>` | `<modal-cart>` (components/modal/modalCart.vue)

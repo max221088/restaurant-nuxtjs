@@ -1,5 +1,5 @@
 <template>
-	<a  href="#" @click.prevent="goTo(index)"
+	<a href="#" @click.prevent="goTo(index)"
 		class="card card-restaurant">
 		<img :src="require(`../assets/${partner.image}`)" alt="image" class="card-image" />
 		<div class="card-text">
@@ -25,11 +25,6 @@
 <script>
 export default {
 	name: 'RestorantCard',
-	data: () => {  
-		return {
-			
-		}
-	},
 	props: {
 		partner: Object,
 		index: Number

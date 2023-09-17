@@ -32,8 +32,8 @@ export default {
 	},
 	methods: {
 		addToCart(product) {
-			//product.amount = "1";
-			//this.$store.commit('addProductToCard', product)
+			product.amount = "1";
+			this.$store.commit('cart/addProductToCard', product)
 		},
 	}
 }

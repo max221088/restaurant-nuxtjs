@@ -16,9 +16,9 @@
 				<button @click="openModalCart()" class="button button-cart" id="cart-button">
 					<span class="button-cart-svg"></span>
 					<span class="button-text">Корзина</span>
-					<!--<span class="button-cart-quantiti" v-if="productForCart.length">
+					<span class="button-cart-quantiti" v-if="productForCart.length">
             {{ productForCart.length }}
-          </span>-->
+          </span>
 				</button>
 				<button class="button button-primary button-out">
 					<span class="button-text">Выйти</span>
@@ -35,22 +35,23 @@
 		name: 'HeaderComponenet',
 		methods: {
 			openAuthModal() {
-				//this.$emit('openAuthModal')
+				this.$emit('openModalAuth')
 			},
 			openModalCart () {
-				//this.$store.commit('isOpenCart');
+				this.$emit('openModalCart')
 			}
 		},
 		computed: {
 			productForCart () {
-        //return this.$store.getters['getCartProducts'];
+        return this.$store.getters['cart/getCartProducts'];
       },
 		},
-		//created () {
-		//	if (window.sessionStorage.cart) {
-    //    this.$store.commit('getCartFromSession', JSON.parse(window.sessionStorage.cart))
-    //  }
-		//}
+		mounted () {
+			if(!process.client) return;
+			if (sessionStorage.cart) {
+        this.$store.commit('cart/getCartFromSession', JSON.parse(window.sessionStorage.cart))
+      }
+		}
 	}
 
 </script>

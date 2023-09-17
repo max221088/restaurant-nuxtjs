@@ -3,14 +3,12 @@
     "name": "index",
     "path": "/",
     "component": "/Users/usermac/Documents/GitHub/restaurant-nuxtjs/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_c78febbc"
+    "chunkName": "pages/index"
   },
   {
     "name": "restaurant-name",
     "path": "/restaurant/:name?",
     "component": "/Users/usermac/Documents/GitHub/restaurant-nuxtjs/pages/restaurant/_name.vue",
-    "chunkName": "pages/restaurant/_name",
-    "_name": "_930cc410"
+    "chunkName": "pages/restaurant/_name"
   }
 ]

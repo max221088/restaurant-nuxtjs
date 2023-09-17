@@ -1,12 +1,11 @@
 export const state = () => ({
-	partners: [],
-	products: []
+	partners: []
 })
 
 export const mutations = {
 	setPartners (state, data) {
 		state.partners = data
-	}	
+	}
 }
 
 export const getters = {
@@ -17,9 +16,5 @@ export const actions = {
 	fetchPartners ({commit}) {
 		let data = require('@/static/db/partners')
 		commit('setPartners', data)
-	},
-	fetchProductsByRestourant ({}, puth) {
-		let data = require(`@/static/db/${puth}`)
-		return data
 	}
 }

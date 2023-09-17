@@ -10,5 +10,11 @@
   },
   "RestaurantCard": {
     "description": "Auto imported from components/RestaurantCard.vue"
+  },
+  "ModalAuth": {
+    "description": "Auto imported from components/modal/modalAuth.vue"
+  },
+  "ModalCart": {
+    "description": "Auto imported from components/modal/modalCart.vue"
   }
 }

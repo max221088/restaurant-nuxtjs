@@ -43,7 +43,7 @@ import ProductCard from '@/components/ProductCard.vue'
 		try {
 			const index = await params.name
 			let partnerPuth = store.getters.getPartners[params.name].products
-			const products = await store.dispatch('fetchProductsByRestourant', partnerPuth)
+			const products = await store.dispatch('products/fetchProductsByRestourant', partnerPuth)
 			return {index, products}
 		} catch (e) {
 			error(e)
