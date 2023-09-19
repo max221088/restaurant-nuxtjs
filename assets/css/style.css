@@ -532,6 +532,29 @@ button {
     align-items: center;
 }
 
+.counter-del-button{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 39px;
+		height: 32px;
+		margin-right: 10px;
+		background: #ffffff;
+		border: 1px solid #40a9ff;
+		box-sizing: border-box;
+		border-radius: 2px;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 22px;
+		color: #40a9ff;
+}
+
+.counter-del-button:hover{
+		background: #ff4040;
+		border: 1px solid #ffffff;
+		color: #ffffff;
+}
+
 .counter-button {
     display: flex;
     align-items: center;

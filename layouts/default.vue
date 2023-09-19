@@ -1,23 +1,23 @@
 <template>
 	<div>
-		<MyHeader @openModalAuth="openModalAuth()" @openModalCart="openModalCart()"/>
+		<SiteHeader @openModalAuth="openModalAuth()" @openModalCart="openModalCart()"/>
 		<nuxt />
-		<MyFooter />
+		<SiteFooter />
 		<ModalAuth ref="modalAuth" />
 		<ModalCart ref="modalCart" />
 	</div>
 </template>
 
 <script>
-import MyHeader from '@/components/MyHeader.vue'
-import MyFooter from '@/components/MyFooter.vue'
+import SiteHeader from '~/components/SiteHeader.vue'
+import SiteFooter from '~/components/SiteFooter.vue'
 import ModalAuth from '../components/modal/modalAuth.vue';
 import ModalCart from '../components/modal/modalCart.vue';
 
 export default {
 	components: {
-		MyHeader,
-		MyFooter,
+		SiteHeader,
+		SiteFooter,
 		ModalAuth,
 		ModalCart
 	},

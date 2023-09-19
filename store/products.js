@@ -1,7 +1,8 @@
 
 export const actions = {
 	fetchProductsByRestourant ({}, puth) {
-		let data = require(`@/static/db/${puth}`)
+		//console.log(puth)
+		let data = require(`@/static/db/${puth}.json`)
 		return data
 	}
 }

@@ -3,11 +3,14 @@ export const state = () => ({
 })
 
 export const mutations = {
+	delProductFromCart(state, index) {
+		state.cart.splice(index, 1)
+	},
 	incrementAmount (state, index) {
 		let newValue = state.cart[index];
 		newValue.amount++;
 		state.cart.splice(index, 1, newValue)
-		window.sessionStorage.setItem('cart', JSON.stringify(state.cart));
+		window.localStorage.setItem('cart', JSON.stringify(state.cart));
 	},
 	decrementAmount(state, index) {
 		if (state.cart[index].amount > 1) {
@@ -15,7 +18,7 @@ export const mutations = {
 			newValue.amount--;
 			state.cart.splice(index, 1, newValue)
 		}
-		window.sessionStorage.setItem('cart', JSON.stringify(state.cart));
+		window.localStorage.setItem('cart', JSON.stringify(state.cart));
 	},
 	addProductToCard (state, prod) {
 		let copy = 0;
@@ -27,7 +30,7 @@ export const mutations = {
 		if (copy === 0) {
 			state.cart.push(prod);
 		}
-		window.sessionStorage.setItem('cart', JSON.stringify(state.cart));
+		window.localStorage.setItem('cart', JSON.stringify(state.cart));
 	},
 	getCartFromSession (state, cart) {
 		state.cart = cart

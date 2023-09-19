@@ -3,16 +3,7 @@
 		<div class="container">
 			<section class="menu">
 				<div class="section-heading">
-					<div class="section-heading-info">
-						<h2 class="section-title restaurant-title">{{ partners[index].name }}</h2>
-						<div class="card-info">
-							<div class="rating">
-								{{ partners[index].stars }}
-							</div>
-							<div class="price">От {{ partners[index].price }} ₽</div>
-							<div class="category">{{ partners[index].kitchen }}</div>
-						</div>
-					</div>
+					<SectionHeadingInfo :name="name" />
 					<!-- /.card-info --> 
 					<div class="filter-section">
 							<select @change="sortByPrice()" v-model="sortParam" class="select">
@@ -37,21 +28,25 @@
 
 <script>
 import ProductCard from '@/components/ProductCard.vue'
+import SectionHeadingInfo from '@/components/SectionHeadingInfo.vue'
 
 	export default {
-		async asyncData({params, error, store}) {
-		try {
-			const index = await params.name
-			let partnerPuth = store.getters.getPartners[params.name].products
-			const products = await store.dispatch('products/fetchProductsByRestourant', partnerPuth)
-			return {index, products}
-		} catch (e) {
-			error(e)
-		}
-	},
 		name: 'restorantViev',
 		components: {
-			ProductCard
+			ProductCard,
+			SectionHeadingInfo
+		},
+		async asyncData({params, error, store}) {
+			try {
+				if (!store.getters.getPartners.length) {
+					await store.dispatch('fetchPartners')
+				}
+				const name = params.name;
+				const products = await store.dispatch('products/fetchProductsByRestourant', params.name)
+				return {products, name}
+			} catch (e) {
+				error(e)
+			}
 		},
 		data () {
 			return {
@@ -68,11 +63,6 @@ import ProductCard from '@/components/ProductCard.vue'
 					}
 				}.bind(this))
 			}
-		},
-		computed: {
-			partners () {
-				return this.$store.getters['getPartners'];
-			}
-		},
+		}
 	}
 </script>

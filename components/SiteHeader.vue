@@ -48,8 +48,8 @@
 		},
 		mounted () {
 			if(!process.client) return;
-			if (sessionStorage.cart) {
-        this.$store.commit('cart/getCartFromSession', JSON.parse(window.sessionStorage.cart))
+			if (localStorage.cart) {
+        this.$store.commit('cart/getCartFromSession', JSON.parse(window.localStorage.cart))
       }
 		}
 	}

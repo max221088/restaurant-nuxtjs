@@ -8,6 +8,7 @@
 			<!-- /.modal-header -->
 			<div class="modal-body" v-for="product, index in productForCart" :key="index">
 				<div class="food-row">
+					<button class="counter-del-button" @click="delProductFromCart(index)">X</button>
 					<span class="food-name">{{ product.name }}</span>
 					<strong class="food-price">{{ product.price }} ₽</strong>
 					<div class="food-counter">
@@ -54,6 +55,9 @@ export default {
       },
 		},
 		methods: {
+			delProductFromCart(index) {
+				this.$store.commit('cart/delProductFromCart', index)
+			},
 			increment(index) {
         this.$store.commit('cart/incrementAmount', index)
       },

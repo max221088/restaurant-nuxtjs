@@ -1,15 +1,18 @@
 {
-  "MyFooter": {
-    "description": "Auto imported from components/MyFooter.vue"
-  },
-  "MyHeader": {
-    "description": "Auto imported from components/MyHeader.vue"
-  },
   "ProductCard": {
     "description": "Auto imported from components/ProductCard.vue"
   },
   "RestaurantCard": {
     "description": "Auto imported from components/RestaurantCard.vue"
+  },
+  "SectionHeadingInfo": {
+    "description": "Auto imported from components/SectionHeadingInfo.vue"
+  },
+  "SiteFooter": {
+    "description": "Auto imported from components/SiteFooter.vue"
+  },
+  "SiteHeader": {
+    "description": "Auto imported from components/SiteHeader.vue"
   },
   "ModalAuth": {
     "description": "Auto imported from components/modal/modalAuth.vue"

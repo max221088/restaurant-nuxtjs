@@ -1,5 +1,5 @@
 <template>
-	<a href="#" @click.prevent="goTo(index)"
+	<nuxt-link no-prefetch :to="{ name: 'restaurant-name', params: { name: nameLink } }"
 		class="card card-restaurant">
 		<img :src="require(`../assets/${partner.image}`)" alt="image" class="card-image" />
 		<div class="card-text">
@@ -18,7 +18,7 @@
 			<!-- /.card-info -->
 		</div>
 		<!-- /.card-text -->
-	</a>
+	</nuxt-link>
 <!-- /.card -->
 </template>
 
@@ -29,9 +29,11 @@ export default {
 		partner: Object,
 		index: Number
 	},
-	methods: {
-		goTo (index) {
-			this.$router.push('/restaurant/'+ index)
+	computed: {
+		nameLink () {
+			let lastIndex = this.partner.products.lastIndexOf('.')
+			let link = this.partner.products.substring(0, lastIndex)
+			return link
 		}
 	}
 }
