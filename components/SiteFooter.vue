@@ -4,7 +4,7 @@
 				<div class="footer-block">
 					<img src="@/assets/img/icon/logo.svg" alt="logo" class="logo footer-logo" />
 					<nav class="footer-nav">
-						<nuxt-link no-prefetch to="/" class="footer-link">Ресторанам </nuxt-link>
+						<nuxt-link to="/" class="footer-link">Ресторанам </nuxt-link>
 						<a href="#" class="footer-link">Курьерам</a>
 						<a href="#" class="footer-link">Пресс-центр</a>
 						<a href="#" class="footer-link">Контакты</a>
