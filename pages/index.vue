@@ -56,14 +56,12 @@ export default {
   components: {
     RestorantCart
   },
-	async asyncData ({store, error}) {
-		try {
-			await store.dispatch('fetchPartners')
-			return {
-				partners: store.getters['getPartners']
-			}
-		} catch (e) {
-			error(e)
+	async fetch ({store}) {
+		await store.dispatch('fetchPartners')
+	},
+	computed: {
+		partners () {
+			return this.$store.getters['getPartners']
 		}
 	}
 }
