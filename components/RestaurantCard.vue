@@ -1,5 +1,5 @@
 <template>
-	<nuxt-link no-prefetch :to="{ name: 'restaurant-name', params: { name: nameLink } }"
+	<nuxt-link :to="{ name: 'restaurant-name', params: { name: nameLink } }"
 		class="card card-restaurant">
 		<img :src="require(`../assets/${partner.image}`)" alt="image" class="card-image" />
 		<div class="card-text">
